@@ -36,3 +36,4 @@ D:\OneDrive - palawanpawnshop.com\Documents\Dev\WpfApp2\WpfApp2\bin\Debug\ExcelD
 D:\OneDrive - palawanpawnshop.com\Documents\Dev\WpfApp2\WpfApp2\bin\Debug\ExcelDataReader.DataSet.pdb
 D:\OneDrive - palawanpawnshop.com\Documents\Dev\WpfApp2\WpfApp2\bin\Debug\ExcelDataReader.DataSet.xml
 D:\OneDrive - palawanpawnshop.com\Documents\Dev\WpfApp2\WpfApp2\obj\Debug\WpfApp2.csproj.CopyComplete
+D:\OneDrive - palawanpawnshop.com\Documents\Dev\WpfApp2\WpfApp2\obj\Debug\GeneratedInternalTypeHelper.g.cs

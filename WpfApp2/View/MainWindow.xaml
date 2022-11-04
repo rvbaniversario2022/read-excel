@@ -3,9 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp2"
+        xmlns:local1="clr-namespace:WpfApp2.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="460" Width="800">
+    <Window.DataContext>
+        <local1:ExcelVM />
+    </Window.DataContext>
     <Grid>
         <StackPanel Width="475">
             <Grid Margin="0,20,0,10">
@@ -20,7 +23,9 @@
                     Grid.Column="0"
                     Margin="5,0"
                     Padding="10,5" 
-                    TextWrapping="Wrap" TextChanged="TextSearch_TextChanged" />
+                    TextWrapping="Wrap"
+                    TextChanged="TextSearch_TextChanged"
+                     />
                 <Button
                     Name="BtnSearch"
                     Grid.Column="1"
@@ -36,7 +41,7 @@
                     Content="Import"
                     Margin="5,0"
                     Padding="10,5"                          
-                    Click="BtnOpen_Click" />
+                    Command="{Binding AddRowsButtonClickCommand}" />
             </Grid>
 
             <Grid Margin="0,0,0,20">
@@ -60,7 +65,7 @@
                     <TextBlock 
                         Text="FROM:"
                         Margin="0,0,0,5" />
-                    <DatePicker Name="DatePickerFrom" Padding="5" />
+                    <DatePicker x:Name="DatePickerFrom" Padding="5" />
                 </StackPanel>
                 <StackPanel Grid.Column="2" Margin="5,0">
                     <TextBlock 
@@ -81,9 +86,10 @@
             </Grid>
 
             <DataGrid
+                Name="DG"
                 IsReadOnly="True"
                 AutoGenerateColumns="True"
-                Name="DataGrid"
+                ItemsSource="{Binding DataTableMerger}"
                 Height="230"
                 Margin="5,0" />
         </StackPanel>
